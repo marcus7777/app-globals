@@ -1,4 +1,9 @@
 <link rel="import" href="../polymer/polymer.html">
+<!--
+# app-globals
+globals for polymer
+for http://www.polymer-project.org/0.5/docs/polymer/polymer.html#global
+-->
 
 <dom-module id="app-globals">
   <script>
@@ -6,6 +11,11 @@
       var values = {};
       Polymer({
         is: 'app-globals',
+        properties: {
+          values: {
+            notify: true
+          }
+        },
         ready: function () {
           this.values = values;
           for (var i = 0; i < this.attributes.length; ++i) {
